@@ -1,14 +1,14 @@
 class Song
 
-  attr_accessor :name
-  attr_reader :artist, :genre
-
-  @@all = []
-
   extend Concerns::Findable
   extend Concerns::ClassMethods
   include Concerns::InstanceMethods
 
+  attr_accessor :name
+  attr_reader :artist, :genre
+
+  @@all = []
+  
   def initialize (name, artist = nil, genre = nil)
     @name = name
     self.artist = artist if artist
